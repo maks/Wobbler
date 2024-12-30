@@ -9,9 +9,10 @@ Midi::Midi() {
     return;
   }
   else {
-    midi_in->openPort(0);
+    midi_in->openPort(1);
     midi_in->ignoreTypes(false, false, false);
     has_connection = true;
+    std::cout << "MIDI input:" << midi_in->getPortName(1) << '\n';
   }
 }
 

@@ -1,7 +1,9 @@
-#include <iostream>
-#include <SDL2/SDL.h>
 #ifndef KEYBOARD_H
 #define KEYBOARD_H
+
+#include <iostream>
+#include <SDL2/SDL.h>
+#include <functional>
 
 class Keyboard {
   public:

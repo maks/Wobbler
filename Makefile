@@ -6,10 +6,10 @@ CFLAGS=-g3
 LIBS=-lGLU -lSDL2 -lpthread -lSDL2_ttf
 
 main: maximilian.o synth.o control.o voice.o gui_container.o utils.o init.o keyboard.o midi.o console.o command.o main.o 
-	g++ -std=c++11 maximilian.o synth.o control.o voice.o gui_container.o utils.o init.o keyboard.o midi.o console.o command.o main.o -o wob -I /usr/local/Cellar/sdl2/2.0.10/include -L /usr/local/Cellar/sdl2/2.0.10/lib -l SDL2-2.0.0 -lrtmidi -framework OpenGL
+	g++ -std=c++11 maximilian.o synth.o control.o voice.o gui_container.o utils.o init.o keyboard.o midi.o console.o command.o main.o -o wob `pkg-config -cflags -libs sdl2` `pkg-config -cflags --libs gl glu` -lrtmidi 
 
 main.o: main.cpp
-	$(CC) -std=c++11 -c main.cpp
+	$(CC) -std=c++11 -I /usr/include/rtmidi/ -c main.cpp
 
 maximilian.o: ./libs/maximilian.cpp
 	$(CC) -std=c++11 -c ./libs/maximilian.cpp
@@ -36,7 +36,7 @@ keyboard.o: keyboard.cpp
 	$(CC) -std=c++11 -c keyboard.cpp
 
 midi.o: midi.cpp
-	$(CC) -std=c++11 -c midi.cpp
+	$(CC) -std=c++11 -I /usr/include/rtmidi/ -c midi.cpp
 
 console.o: console.cpp
 	$(CC) -std=c++11 -c console.cpp

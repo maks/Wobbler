@@ -1,6 +1,7 @@
 #ifndef COMMAND_H
 #define COMMAND_H
 #include <iostream>
+#include <functional>
 
 class Command {
   private:

@@ -1,6 +1,7 @@
 #ifndef MIDI_H
 #define MIDI_H
-#include <rtMidi.h>
+#include <RtMidi.h>
+#include <functional>
 
 class Midi {
   private:

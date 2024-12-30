@@ -4,7 +4,7 @@
 #include <SDL2/SDL_opengl.h>
 #include <SDL2/SDL_audio.h>
 #include <SDL2/SDL_ttf.h>
-#include <OpenGL/glu.h>
+#include <GL/glu.h>
 #include "main.h"
 #include "init.h"
 #include "libs/maximilian.h"

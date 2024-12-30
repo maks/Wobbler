@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <functional>
 #include "defs.h"
 #include "command.h"
 

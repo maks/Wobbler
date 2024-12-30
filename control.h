@@ -1,7 +1,9 @@
 #ifndef CONTROL_H
 #define CONTROL_H
 #include <iostream>
+#include <functional>
 #include "synth.h"
+
 class Control {
   float xPos, yPos;
   float width, height;

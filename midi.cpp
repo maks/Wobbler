@@ -1,4 +1,3 @@
-#include <rtMidi.h>
 #include "midi.h"
 
 Midi::Midi() {

@@ -32,6 +32,17 @@ Wobbler is a GUI for Mick Grierson's [Maximilian](https://github.com/micknoise/M
 
 Note: Currently there is no Makefile for Linux, but a slight bit of tweaking and it should compile fine.
 
+## How to use (Linux, Ubuntu 24.04)
+
+* Install dependencies: `sudo apt install librtmidi-dev libsdl2-ttf-dev libglu1-mesa-dev`
+* Clone the repo: `https://github.com/connor-brooks/Wobbler.git`
+* Enter the director: `cd Wobbler`
+* Build: `make`
+* To test run: `./test.sh | ./wob --no-gui`
+* To run in GUI mode: `./wob`
+* To run in CLI mode: `./wob --no-gui`
+
+
 ## What is Wobbler for?
 In short, it is to enable quick experimentation with synthesis parameters, in a way that mimics the experience of a hardware synth. In addition to offering a typical GUI, the synth can also be controlled via MIDI and your terminals standard input. This opens up allows the synth to be easily scripted.
 
